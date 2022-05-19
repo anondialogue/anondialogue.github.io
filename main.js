@@ -13,7 +13,7 @@ const ChatBox = {
   methods: {
     pushUtterance: function(speaker, text) {
         if(speaker==='bot'){
-            text = text.replace('Hi, this is an Alexa Prize Socialbot.', 'Hi, I\'m Chirpy.');
+            text = text.replace('Hi, this is an Alexa Prize Socialbot.', 'Hi, I\'m Warble.');
         }
       this.utterances.push({speaker: speaker, text: text});
       this.$nextTick(function(){
