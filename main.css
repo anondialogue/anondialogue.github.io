@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    background: #FBFBFB;
+}
+.container, p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+}
+
+/* Set fonts for different resolutions */
+.container, .next-utterance-input > .new-utterance {
+    font-family: 'Fira Sans', sans-serif;
+    /*font-size: 40px;*/
+}
+.transcript {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.chat-box > * {
+    /*width:100%;*/
+}
+.chat-box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-weight: 300;
+    /*padding: 0px 10px 0px 10px;*/
+}
+
+.speech-bubble-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.user{
+    justify-content: flex-end;
+    font-weight: 400;
+}
+.bot{
+    justify-content: flex-start;
+}
+.speech-bubble{
+    /*border: lightcoral 1px solid;*/
+    padding: 10px;
+    max-width: 70%;
+
+    margin: 0px 20px 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.26) 2px 2px 7px; /* rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+.user > .speech-bubble {
+    /* border-radius: 10px 20px 0px 10px; */
+    border-radius: 10px;
+    background-color: #117af6;
+    color: white;
+    /* background: hsl(69, 32%, 92%); */
+    /*background: hsl(200, 54%, 95%);*/
+}
+.bot > .speech-bubble {
+    /* background: hsl(352, 52%, 95%);*/
+    border-radius: 10px;
+    background-color: #e8e5e5;
+    color: #444444;
+
+
+}
+.next-utterance-input{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px 20px 10px;
+    /* */
+}
+.next-utterance-input > .new-utterance{
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 16px;
+
+    border-radius: 5px;
+    /*#border: hsl(69, 32%, 80%) solid 2px;*/
+    border: 2px solid #ddd;
+    border-right: 0;
+    margin-right: 5px;
+}
+.next-utterance-input > .new-utterance:invalid {
+    box-shadow: none;
+}
+.next-utterance-input > .new-utterance:focus {
+    outline: none;
+}
+.new-utterance:focus-within {
+    /* border: hsl(69, 32%, 50%) solid 2px */
+    border: 2px solid #117af6;
+    box-shadow: #117af633 3px 3px 6px;
+
+}
+
+.next-utterance-input > .submit{
+    border-radius: 5px;
+    /*border: hsl(69, 32%, 50%) solid 2px;*/
+    border: 0;
+    background: hsl(69, 32%, 90%);
+    border-left: 0;
+    width: 50px;
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    height:80vh;
+    font-size: 16px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+@media (min-width: 800px) {
+    .centering {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .container{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        /*border-right:  #F4795B 1px solid;
+        border-left: #F4795B 1px solid;*/
+    }
+}
+@media (min-width: 800px) {
+    .next-utterance-input > .new-utterance {
+        font-size: 20px;
+    }
+}
+.send-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    fill:  #155fb6;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
